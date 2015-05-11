@@ -19,6 +19,10 @@
 		F80EFAF81AFC8E2A00CAED79 /* PopOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80EFAF61AFC8E2A00CAED79 /* PopOverViewController.xib */; };
 		F80EFAFC1AFCA81200CAED79 /* work_list_fon.png in Resources */ = {isa = PBXBuildFile; fileRef = F80EFAFA1AFCA81200CAED79 /* work_list_fon.png */; };
 		F80EFAFE1AFCA90400CAED79 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F80EFAFD1AFCA90400CAED79 /* add_button.png */; };
+		F8F457471B0053FA00E1D711 /* AMCStrechableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F457421B0053FA00E1D711 /* AMCStrechableButton.m */; };
+		F8F457481B0053FA00E1D711 /* NSButton+Addation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F457441B0053FA00E1D711 /* NSButton+Addation.m */; };
+		F8F457491B0053FA00E1D711 /* NSColor+AMC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F457461B0053FA00E1D711 /* NSColor+AMC.m */; };
+		F8F4574C1B00541C00E1D711 /* UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F4574B1B00541C00E1D711 /* UIView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,14 @@
 		F80EFAF61AFC8E2A00CAED79 /* PopOverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopOverViewController.xib; path = worklist/PopOverViewController.xib; sourceTree = "<group>"; };
 		F80EFAFA1AFCA81200CAED79 /* work_list_fon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = work_list_fon.png; path = worklist/work_list_fon.png; sourceTree = "<group>"; };
 		F80EFAFD1AFCA90400CAED79 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add_button.png; path = worklist/add_button.png; sourceTree = "<group>"; };
+		F8F457411B0053FA00E1D711 /* AMCStrechableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMCStrechableButton.h; path = worklist/AMCStrechableButton.h; sourceTree = "<group>"; };
+		F8F457421B0053FA00E1D711 /* AMCStrechableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMCStrechableButton.m; path = worklist/AMCStrechableButton.m; sourceTree = "<group>"; };
+		F8F457431B0053FA00E1D711 /* NSButton+Addation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSButton+Addation.h"; path = "worklist/NSButton+Addation.h"; sourceTree = "<group>"; };
+		F8F457441B0053FA00E1D711 /* NSButton+Addation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSButton+Addation.m"; path = "worklist/NSButton+Addation.m"; sourceTree = "<group>"; };
+		F8F457451B0053FA00E1D711 /* NSColor+AMC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+AMC.h"; path = "worklist/NSColor+AMC.h"; sourceTree = "<group>"; };
+		F8F457461B0053FA00E1D711 /* NSColor+AMC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+AMC.m"; path = "worklist/NSColor+AMC.m"; sourceTree = "<group>"; };
+		F8F4574A1B00541C00E1D711 /* UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIView.h; path = worklist/UIView.h; sourceTree = "<group>"; };
+		F8F4574B1B00541C00E1D711 /* UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIView.m; path = worklist/UIView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +145,14 @@
 		F80EFAED1AFC85A900CAED79 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F8F4574A1B00541C00E1D711 /* UIView.h */,
+				F8F4574B1B00541C00E1D711 /* UIView.m */,
+				F8F457411B0053FA00E1D711 /* AMCStrechableButton.h */,
+				F8F457421B0053FA00E1D711 /* AMCStrechableButton.m */,
+				F8F457431B0053FA00E1D711 /* NSButton+Addation.h */,
+				F8F457441B0053FA00E1D711 /* NSButton+Addation.m */,
+				F8F457451B0053FA00E1D711 /* NSColor+AMC.h */,
+				F8F457461B0053FA00E1D711 /* NSColor+AMC.m */,
 				F80EFAFD1AFCA90400CAED79 /* add_button.png */,
 				F80EFAFA1AFCA81200CAED79 /* work_list_fon.png */,
 				F80EFAF01AFC88E100CAED79 /* status_icon.png */,
@@ -247,8 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8F457481B0053FA00E1D711 /* NSButton+Addation.m in Sources */,
 				F80EFAF71AFC8E2A00CAED79 /* PopOverViewController.m in Sources */,
 				F80EFAD31AFC569200CAED79 /* main.m in Sources */,
+				F8F457471B0053FA00E1D711 /* AMCStrechableButton.m in Sources */,
+				F8F4574C1B00541C00E1D711 /* UIView.m in Sources */,
+				F8F457491B0053FA00E1D711 /* NSColor+AMC.m in Sources */,
 				F80EFAD11AFC569200CAED79 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +460,7 @@
 				F80EFAE91AFC569200CAED79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F80EFAEA1AFC569200CAED79 /* Build configuration list for PBXNativeTarget "worklistTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +469,7 @@
 				F80EFAEC1AFC569200CAED79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
