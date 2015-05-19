@@ -11,9 +11,8 @@
 @implementation UIBoxLine
 
 - (void)drawRect:(NSRect)dirtyRect {
-    [[NSColor grayColor] set];
-    NSLog(@"%@",NSStringFromRect(self.frame));
-    NSRectFill(CGRectMake(CGRectGetMinX(self.frame), CGRectGetMinY(self.frame), CGRectGetWidth(self.frame), 1));
+    [[NSColor grayColor] setFill];
+    NSRectFill(dirtyRect);
 }
 
 @end

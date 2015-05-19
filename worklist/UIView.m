@@ -34,7 +34,7 @@
         [[NSColor blackColor] set];
         NSRectFill(NSMakeRect(0, -4, self.bounds.size.width, 1.0));
     }else{
-        [backgroundColor set];
+        [backgroundColor setFill];
         NSRectFill(dirtyRect);
     }
 }

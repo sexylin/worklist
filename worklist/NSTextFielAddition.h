@@ -9,7 +9,6 @@
 #import <Cocoa/Cocoa.h>
 
 @protocol NSTextFieldAddtionDelegate <NSObject>
-
 - (void)textfieldWillBeginEditting:(NSTextField *)field;
 - (void)textfieldResignFirstResponder:(NSTextField *)field;
 

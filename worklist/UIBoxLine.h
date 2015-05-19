@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface UIBoxLine : NSBox
+@interface UIBoxLine : NSView
 
 @end

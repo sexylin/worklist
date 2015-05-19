@@ -14,6 +14,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="_popOver" destination="kgE-li-rpz" id="VqY-GY-wkc"/>
+                <outlet property="calendar" destination="xCd-Hs-rC3" id="udh-tK-C6l"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -29,6 +30,7 @@
                 <outlet property="delegate" destination="4J7-zy-0Ex" id="eNZ-p6-zqU"/>
             </connections>
         </popover>
+        <viewController id="xCd-Hs-rC3" customClass="PopCalendarViewController"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="worklist" id="1Xt-HY-uBw">

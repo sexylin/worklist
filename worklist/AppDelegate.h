@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "PopOverViewController.h"
+#import "PopCalendarViewController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>{
     NSStatusBar *systemBar;
@@ -15,8 +16,9 @@
     IBOutlet PopOverViewController *popVC;
     IBOutlet NSPopover *_popOver;
     BOOL _isShow;
+    
 }
-
+@property (assign) IBOutlet PopCalendarViewController *calendar;
 
 @end
 

@@ -17,5 +17,6 @@
     IBOutlet NSDatePicker *_datePicker;
     IBOutlet NSBox *_hor1;
     NSPopover *_datePop;
+    IBOutlet NSView *_popView;
 }
 @end
