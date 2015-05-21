@@ -17,4 +17,5 @@
 @interface NSTextFielAddition : NSTextField
 
 @property (assign)IBOutlet NSObject <NSTextFieldAddtionDelegate>*editDelegate;
+@property (assign)BOOL wrong;
 @end

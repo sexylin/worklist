@@ -10,10 +10,16 @@
 #import <sys/event.h>
 
 @implementation NSTextFielAddition
+@synthesize wrong;
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    
+    if(wrong){
+        NSBezierPath* bPath = [NSBezierPath bezierPathWithRoundedRect:dirtyRect xRadius:2.0 yRadius:2.0f];
+        [bPath setLineWidth:2];
+        [[NSColor redColor] set];
+        [bPath stroke];
+    }
     // Drawing code here.
 }
 

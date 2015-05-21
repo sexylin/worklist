@@ -9,6 +9,9 @@
 #import "PopOverViewController.h"
 #import "UIView.h"
 #import "common.h"
+#import "SLTask.h"
+#import "CommonFunction.h"
+#import "SLUser.h"
 
 @interface PopOverViewController ()
 
@@ -19,8 +22,7 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     
-    UIView *backView = (UIView *)self.view;
-    backView.backgroundColor = [NSColor whiteColor];
+    _contentView.backgroundColor = [NSColor whiteColor];
     
     _tabbarView.backgroundColor = [NSColor whiteColor];
 }
@@ -38,6 +40,33 @@
         _dateText.stringValue = dateFormat;
     }];
     [__AppDelegate__.calendar showInView:sender];
+}
+
+- (IBAction)clickAddList:(NSButton *)button{
+    NSString *description = _descriptionTxt.string;
+    NSString *category = _categoryText.stringValue;
+    NSString *dateString = _dateText.stringValue;
+    if([description length] && [category length] && [dateString length]){
+        SLTask *task = [[SLTask alloc]init];
+        task.taskDescription = description;
+        task.category=  category;
+        task.endDate = [CommonFunction dateFromString:dateString];
+        task.createDate = [NSDate date];
+        task.addDescription = @"";
+        task.isComplete = 0;
+        [CommonFunction createTask:task];
+        [task release];
+    }else{
+        if([category length] == 0){
+            _categoryText.wrong = YES;
+            [_categoryText setNeedsDisplay];
+        }
+        
+        if([dateString length] == 0){
+            _dateText.wrong = YES;
+            [_dateText setNeedsDisplay];
+        }
+    }
 }
 
 @end

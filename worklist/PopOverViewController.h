@@ -12,11 +12,12 @@
 @class UIView;
 @interface PopOverViewController : NSViewController<NSPopoverDelegate,NSTextFieldAddtionDelegate>{
     IBOutlet UIView *_tabbarView;
-    IBOutlet NSTextFielAddition *_categoryText;
-    IBOutlet NSTextFielAddition *_dateText;
+    IBOutlet UIView *_contentView;
     IBOutlet NSDatePicker *_datePicker;
-    IBOutlet NSBox *_hor1;
     NSPopover *_datePop;
     IBOutlet NSView *_popView;
+    IBOutlet NSTextView *_descriptionTxt;
+    IBOutlet NSTextFielAddition *_categoryText;
+    IBOutlet NSTextFielAddition *_dateText;
 }
 @end

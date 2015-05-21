@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "GVFileNotificationCenter.h"
+#import "CommonFunction.h"
 
 @interface AppDelegate ()
 
@@ -26,13 +27,7 @@
     statsuButton.target = self;
     statsuButton.action =@selector(popUpStatusView);
     _sysItem.view = statsuButton;
-    
-    GVFileNotificationCenter *notiCenter = [[GVFileNotificationCenter alloc]init];
-    [notiCenter addObserver:self selector:@selector(fileChanged:) path:@"/Library"];
-}
-
-- (void)fileChanged:(id)sender{
-    
+    [CommonFunction createSqlite];
 }
 
 - (void)popUpStatusView{
