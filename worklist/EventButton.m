@@ -27,6 +27,8 @@
     if(toolTip){
         _popOver = [[NSPopover alloc]init];
         _popOver.behavior = NSPopoverBehaviorSemitransient;
+        _popOver.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantDark];
+        _popOver.animates = NO;
         NSViewController *vc = [[NSViewController alloc]init];
         
         NSSize size = [self sizeByString:toolTip];
@@ -36,7 +38,7 @@
         label.editable = NO;
         label.bordered = NO;
         label.font = [NSFont systemFontOfSize:12.0f];
-        label.textColor = AMCMakeColor(92, 92, 92, 92);
+        label.textColor = AMCMakeColor(215, 215, 215, 1.0);
         label.stringValue = toolTip;
         
         vc.view = label;

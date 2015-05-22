@@ -9,6 +9,30 @@
 /* Begin PBXBuildFile section */
 		F8002FCB1B0C810E002CBB4C /* add_to_list.png in Resources */ = {isa = PBXBuildFile; fileRef = F8002FCA1B0C810E002CBB4C /* add_to_list.png */; };
 		F8007E401B01FA4400DA161B /* NSTextFielAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = F8007E3F1B01FA4400DA161B /* NSTextFielAddition.m */; };
+		F808CE0F1B0EFD1600124EE4 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F808CDDC1B0EFD1600124EE4 /* INAppStoreWindow.m */; };
+		F808CE101B0EFD1600124EE4 /* INWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F808CDDE1B0EFD1600124EE4 /* INWindowButton.m */; };
+		F808CE191B0F093D00124EE4 /* INAppStoreWindowSwizzling.c in Sources */ = {isa = PBXBuildFile; fileRef = F808CE121B0F093D00124EE4 /* INAppStoreWindowSwizzling.c */; };
+		F808CE1A1B0F093D00124EE4 /* INWindowBackgroundView+CoreUIRendering.m in Sources */ = {isa = PBXBuildFile; fileRef = F808CE151B0F093D00124EE4 /* INWindowBackgroundView+CoreUIRendering.m */; };
+		F808CE1B1B0F093D00124EE4 /* NSDocument+INAppStoreWindowFixes.m in Sources */ = {isa = PBXBuildFile; fileRef = F808CE171B0F093D00124EE4 /* NSDocument+INAppStoreWindowFixes.m */; };
+		F808CE2B1B0F0AE600124EE4 /* close-active-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE1C1B0F0AE600124EE4 /* close-active-color.tiff */; };
+		F808CE2C1B0F0AE600124EE4 /* close-activenokey-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE1D1B0F0AE600124EE4 /* close-activenokey-color.tiff */; };
+		F808CE2D1B0F0AE600124EE4 /* close-inactive-disabled-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE1E1B0F0AE600124EE4 /* close-inactive-disabled-color.tiff */; };
+		F808CE2E1B0F0AE600124EE4 /* close-pd-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE1F1B0F0AE600124EE4 /* close-pd-color.tiff */; };
+		F808CE2F1B0F0AE600124EE4 /* close-rollover-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE201B0F0AE600124EE4 /* close-rollover-color.tiff */; };
+		F808CE301B0F0AE600124EE4 /* minimize-active-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE211B0F0AE600124EE4 /* minimize-active-color.tiff */; };
+		F808CE311B0F0AE600124EE4 /* minimize-activenokey-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE221B0F0AE600124EE4 /* minimize-activenokey-color.tiff */; };
+		F808CE321B0F0AE600124EE4 /* minimize-inactive-disabled-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE231B0F0AE600124EE4 /* minimize-inactive-disabled-color.tiff */; };
+		F808CE331B0F0AE600124EE4 /* minimize-pd-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE241B0F0AE600124EE4 /* minimize-pd-color.tiff */; };
+		F808CE341B0F0AE600124EE4 /* minimize-rollover-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE251B0F0AE600124EE4 /* minimize-rollover-color.tiff */; };
+		F808CE351B0F0AE600124EE4 /* zoom-active-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE261B0F0AE600124EE4 /* zoom-active-color.tiff */; };
+		F808CE361B0F0AE600124EE4 /* zoom-activenokey-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE271B0F0AE600124EE4 /* zoom-activenokey-color.tiff */; };
+		F808CE371B0F0AE600124EE4 /* zoom-inactive-disabled-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE281B0F0AE600124EE4 /* zoom-inactive-disabled-color.tiff */; };
+		F808CE381B0F0AE600124EE4 /* zoom-pd-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE291B0F0AE600124EE4 /* zoom-pd-color.tiff */; };
+		F808CE391B0F0AE600124EE4 /* zoom-rollover-color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F808CE2A1B0F0AE600124EE4 /* zoom-rollover-color.tiff */; };
+		F808CE3C1B0F0F1200124EE4 /* left_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = F808CE3A1B0F0F1200124EE4 /* left_bar.png */; };
+		F808CE3D1B0F0F1200124EE4 /* right_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = F808CE3B1B0F0F1200124EE4 /* right_bar.png */; };
+		F808CE411B0F2B2000124EE4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F808CE3F1B0F2B2000124EE4 /* HomeViewController.m */; };
+		F808CE421B0F2B2000124EE4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F808CE401B0F2B2000124EE4 /* HomeViewController.xib */; };
 		F80DFC401B0D842500C1707F /* CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = F80DFC3F1B0D842500C1707F /* CommonFunction.m */; };
 		F80DFC421B0D84B800C1707F /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F80DFC411B0D84B800C1707F /* libsqlite3.0.dylib */; };
 		F80DFC791B0DB46700C1707F /* user_data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F80DFC781B0DB46700C1707F /* user_data.sqlite */; };
@@ -67,6 +91,37 @@
 		F8002FCA1B0C810E002CBB4C /* add_to_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_to_list.png; sourceTree = "<group>"; };
 		F8007E3E1B01FA4400DA161B /* NSTextFielAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSTextFielAddition.h; path = worklist/NSTextFielAddition.h; sourceTree = "<group>"; };
 		F8007E3F1B01FA4400DA161B /* NSTextFielAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSTextFielAddition.m; path = worklist/NSTextFielAddition.m; sourceTree = "<group>"; };
+		F808CDDB1B0EFD1600124EE4 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
+		F808CDDC1B0EFD1600124EE4 /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
+		F808CDDD1B0EFD1600124EE4 /* INWindowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INWindowButton.h; sourceTree = "<group>"; };
+		F808CDDE1B0EFD1600124EE4 /* INWindowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INWindowButton.m; sourceTree = "<group>"; };
+		F808CE121B0F093D00124EE4 /* INAppStoreWindowSwizzling.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = INAppStoreWindowSwizzling.c; sourceTree = "<group>"; };
+		F808CE131B0F093D00124EE4 /* INAppStoreWindowSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindowSwizzling.h; sourceTree = "<group>"; };
+		F808CE141B0F093D00124EE4 /* INWindowBackgroundView+CoreUIRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "INWindowBackgroundView+CoreUIRendering.h"; sourceTree = "<group>"; };
+		F808CE151B0F093D00124EE4 /* INWindowBackgroundView+CoreUIRendering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "INWindowBackgroundView+CoreUIRendering.m"; sourceTree = "<group>"; };
+		F808CE161B0F093D00124EE4 /* NSDocument+INAppStoreWindowFixes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDocument+INAppStoreWindowFixes.h"; sourceTree = "<group>"; };
+		F808CE171B0F093D00124EE4 /* NSDocument+INAppStoreWindowFixes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDocument+INAppStoreWindowFixes.m"; sourceTree = "<group>"; };
+		F808CE181B0F093D00124EE4 /* INAppStoreWindowCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = INAppStoreWindowCompatibility.h; path = worklist/INAppStoreWindow/INAppStoreWindowCompatibility.h; sourceTree = SOURCE_ROOT; };
+		F808CE1C1B0F0AE600124EE4 /* close-active-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "close-active-color.tiff"; sourceTree = "<group>"; };
+		F808CE1D1B0F0AE600124EE4 /* close-activenokey-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "close-activenokey-color.tiff"; sourceTree = "<group>"; };
+		F808CE1E1B0F0AE600124EE4 /* close-inactive-disabled-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "close-inactive-disabled-color.tiff"; sourceTree = "<group>"; };
+		F808CE1F1B0F0AE600124EE4 /* close-pd-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "close-pd-color.tiff"; sourceTree = "<group>"; };
+		F808CE201B0F0AE600124EE4 /* close-rollover-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "close-rollover-color.tiff"; sourceTree = "<group>"; };
+		F808CE211B0F0AE600124EE4 /* minimize-active-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "minimize-active-color.tiff"; sourceTree = "<group>"; };
+		F808CE221B0F0AE600124EE4 /* minimize-activenokey-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "minimize-activenokey-color.tiff"; sourceTree = "<group>"; };
+		F808CE231B0F0AE600124EE4 /* minimize-inactive-disabled-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "minimize-inactive-disabled-color.tiff"; sourceTree = "<group>"; };
+		F808CE241B0F0AE600124EE4 /* minimize-pd-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "minimize-pd-color.tiff"; sourceTree = "<group>"; };
+		F808CE251B0F0AE600124EE4 /* minimize-rollover-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "minimize-rollover-color.tiff"; sourceTree = "<group>"; };
+		F808CE261B0F0AE600124EE4 /* zoom-active-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "zoom-active-color.tiff"; sourceTree = "<group>"; };
+		F808CE271B0F0AE600124EE4 /* zoom-activenokey-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "zoom-activenokey-color.tiff"; sourceTree = "<group>"; };
+		F808CE281B0F0AE600124EE4 /* zoom-inactive-disabled-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "zoom-inactive-disabled-color.tiff"; sourceTree = "<group>"; };
+		F808CE291B0F0AE600124EE4 /* zoom-pd-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "zoom-pd-color.tiff"; sourceTree = "<group>"; };
+		F808CE2A1B0F0AE600124EE4 /* zoom-rollover-color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "zoom-rollover-color.tiff"; sourceTree = "<group>"; };
+		F808CE3A1B0F0F1200124EE4 /* left_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = left_bar.png; path = worklist/left_bar.png; sourceTree = "<group>"; };
+		F808CE3B1B0F0F1200124EE4 /* right_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = right_bar.png; path = worklist/right_bar.png; sourceTree = "<group>"; };
+		F808CE3E1B0F2B2000124EE4 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = worklist/HomeViewController.h; sourceTree = "<group>"; };
+		F808CE3F1B0F2B2000124EE4 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = worklist/HomeViewController.m; sourceTree = "<group>"; };
+		F808CE401B0F2B2000124EE4 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = worklist/HomeViewController.xib; sourceTree = "<group>"; };
 		F80DFC3E1B0D842500C1707F /* CommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonFunction.h; path = worklist/CommonFunction.h; sourceTree = "<group>"; };
 		F80DFC3F1B0D842500C1707F /* CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonFunction.m; path = worklist/CommonFunction.m; sourceTree = "<group>"; };
 		F80DFC411B0D84B800C1707F /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -157,9 +212,64 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		F808CDA91B0EFD1600124EE4 /* INAppStoreWindow */ = {
+			isa = PBXGroup;
+			children = (
+				F808CDAA1B0EFD1600124EE4 /* images */,
+				F808CE181B0F093D00124EE4 /* INAppStoreWindowCompatibility.h */,
+				F808CDDB1B0EFD1600124EE4 /* INAppStoreWindow.h */,
+				F808CDDC1B0EFD1600124EE4 /* INAppStoreWindow.m */,
+				F808CDDD1B0EFD1600124EE4 /* INWindowButton.h */,
+				F808CDDE1B0EFD1600124EE4 /* INWindowButton.m */,
+			);
+			name = INAppStoreWindow;
+			path = worklist/INAppStoreWindow;
+			sourceTree = "<group>";
+		};
+		F808CDAA1B0EFD1600124EE4 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F808CE111B0F093D00124EE4 /* Extensions */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		F808CE111B0F093D00124EE4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F808CE1C1B0F0AE600124EE4 /* close-active-color.tiff */,
+				F808CE1D1B0F0AE600124EE4 /* close-activenokey-color.tiff */,
+				F808CE1E1B0F0AE600124EE4 /* close-inactive-disabled-color.tiff */,
+				F808CE1F1B0F0AE600124EE4 /* close-pd-color.tiff */,
+				F808CE201B0F0AE600124EE4 /* close-rollover-color.tiff */,
+				F808CE211B0F0AE600124EE4 /* minimize-active-color.tiff */,
+				F808CE221B0F0AE600124EE4 /* minimize-activenokey-color.tiff */,
+				F808CE231B0F0AE600124EE4 /* minimize-inactive-disabled-color.tiff */,
+				F808CE241B0F0AE600124EE4 /* minimize-pd-color.tiff */,
+				F808CE251B0F0AE600124EE4 /* minimize-rollover-color.tiff */,
+				F808CE261B0F0AE600124EE4 /* zoom-active-color.tiff */,
+				F808CE271B0F0AE600124EE4 /* zoom-activenokey-color.tiff */,
+				F808CE281B0F0AE600124EE4 /* zoom-inactive-disabled-color.tiff */,
+				F808CE291B0F0AE600124EE4 /* zoom-pd-color.tiff */,
+				F808CE2A1B0F0AE600124EE4 /* zoom-rollover-color.tiff */,
+				F808CE121B0F093D00124EE4 /* INAppStoreWindowSwizzling.c */,
+				F808CE131B0F093D00124EE4 /* INAppStoreWindowSwizzling.h */,
+				F808CE141B0F093D00124EE4 /* INWindowBackgroundView+CoreUIRendering.h */,
+				F808CE151B0F093D00124EE4 /* INWindowBackgroundView+CoreUIRendering.m */,
+				F808CE161B0F093D00124EE4 /* NSDocument+INAppStoreWindowFixes.h */,
+				F808CE171B0F093D00124EE4 /* NSDocument+INAppStoreWindowFixes.m */,
+			);
+			name = Extensions;
+			path = worklist/INAppStoreWindow/Extensions;
+			sourceTree = SOURCE_ROOT;
+		};
 		F80EFAC11AFC569200CAED79 = {
 			isa = PBXGroup;
 			children = (
+				F808CE3E1B0F2B2000124EE4 /* HomeViewController.h */,
+				F808CE3F1B0F2B2000124EE4 /* HomeViewController.m */,
+				F808CE401B0F2B2000124EE4 /* HomeViewController.xib */,
+				F808CDA91B0EFD1600124EE4 /* INAppStoreWindow */,
 				F80DFC7D1B0DC2B200C1707F /* SLUser.h */,
 				F80DFC7E1B0DC2B200C1707F /* SLUser.m */,
 				F80DFC7A1B0DB9BA00C1707F /* SLTask.h */,
@@ -240,6 +350,8 @@
 		F80EFAED1AFC85A900CAED79 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F808CE3A1B0F0F1200124EE4 /* left_bar.png */,
+				F808CE3B1B0F0F1200124EE4 /* right_bar.png */,
 				F82D40C81B0B3505007FD007 /* hour_later_nomal.png */,
 				F82D40C91B0B3505007FD007 /* three_hours_later_normal.png */,
 				F82D40CA1B0B3505007FD007 /* tomorrow_normal.png */,
@@ -354,31 +466,49 @@
 			buildActionMask = 2147483647;
 			files = (
 				F82D40CE1B0B3505007FD007 /* tomorrow_normal.png in Resources */,
+				F808CE3C1B0F0F1200124EE4 /* left_bar.png in Resources */,
 				F82D40B41B0B0A26007FD007 /* last_icon.png in Resources */,
+				F808CE301B0F0AE600124EE4 /* minimize-active-color.tiff in Resources */,
+				F808CE321B0F0AE600124EE4 /* minimize-inactive-disabled-color.tiff in Resources */,
 				F80EFAF81AFC8E2A00CAED79 /* PopOverViewController.xib in Resources */,
 				F8F66F791B09BEFA006B7D97 /* category.png in Resources */,
 				F8F66F761B09AD73006B7D97 /* alarm_off.png in Resources */,
+				F808CE2B1B0F0AE600124EE4 /* close-active-color.tiff in Resources */,
 				F8F66F771B09AD73006B7D97 /* alarm_on.png in Resources */,
+				F808CE351B0F0AE600124EE4 /* zoom-active-color.tiff in Resources */,
 				F82D40BD1B0B0AD7007FD007 /* PopCalendarViewController.xib in Resources */,
 				F82D40CF1B0B3505007FD007 /* week_later_normal.png in Resources */,
+				F808CE381B0F0AE600124EE4 /* zoom-pd-color.tiff in Resources */,
 				F82D40CD1B0B3505007FD007 /* three_hours_later_normal.png in Resources */,
 				F80EFAD51AFC569200CAED79 /* Images.xcassets in Resources */,
 				F82D40B71B0B0A26007FD007 /* tomorrow.png in Resources */,
+				F808CE421B0F2B2000124EE4 /* HomeViewController.xib in Resources */,
+				F808CE2D1B0F0AE600124EE4 /* close-inactive-disabled-color.tiff in Resources */,
 				F80EFAF31AFC88E100CAED79 /* status_icon@2x.png in Resources */,
+				F808CE311B0F0AE600124EE4 /* minimize-activenokey-color.tiff in Resources */,
+				F808CE371B0F0AE600124EE4 /* zoom-inactive-disabled-color.tiff in Resources */,
 				F82D40CC1B0B3505007FD007 /* hour_later_nomal.png in Resources */,
 				F82D40B61B0B0A26007FD007 /* next_icon.png in Resources */,
 				F80EFAFC1AFCA81200CAED79 /* work_list_fon.png in Resources */,
+				F808CE2C1B0F0AE600124EE4 /* close-activenokey-color.tiff in Resources */,
 				F82D40B81B0B0A26007FD007 /* week_later.png in Resources */,
 				F8F66F731B09AB7B006B7D97 /* calendar.png in Resources */,
+				F808CE2F1B0F0AE600124EE4 /* close-rollover-color.tiff in Resources */,
 				F82D40C01B0B117D007FD007 /* hour_later.png in Resources */,
 				F80EFAD81AFC569200CAED79 /* MainMenu.xib in Resources */,
 				F80EFAFE1AFCA90400CAED79 /* add_button.png in Resources */,
 				F8002FCB1B0C810E002CBB4C /* add_to_list.png in Resources */,
+				F808CE361B0F0AE600124EE4 /* zoom-activenokey-color.tiff in Resources */,
 				F80EFAF21AFC88E100CAED79 /* status_icon.png in Resources */,
 				F82D40C71B0B20A0007FD007 /* month_later_normal.png in Resources */,
+				F808CE391B0F0AE600124EE4 /* zoom-rollover-color.tiff in Resources */,
 				F82D40C11B0B117D007FD007 /* three_hours_later.png in Resources */,
 				F80EFAEF1AFC85C300CAED79 /* icon.icns in Resources */,
+				F808CE3D1B0F0F1200124EE4 /* right_bar.png in Resources */,
+				F808CE331B0F0AE600124EE4 /* minimize-pd-color.tiff in Resources */,
+				F808CE341B0F0AE600124EE4 /* minimize-rollover-color.tiff in Resources */,
 				F80DFC791B0DB46700C1707F /* user_data.sqlite in Resources */,
+				F808CE2E1B0F0AE600124EE4 /* close-pd-color.tiff in Resources */,
 				F82D40B51B0B0A26007FD007 /* month_later.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,20 +527,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F808CE1B1B0F093D00124EE4 /* NSDocument+INAppStoreWindowFixes.m in Sources */,
 				F8F457481B0053FA00E1D711 /* NSButton+Addation.m in Sources */,
 				F80DFC401B0D842500C1707F /* CommonFunction.m in Sources */,
 				F8007E401B01FA4400DA161B /* NSTextFielAddition.m in Sources */,
 				F80EFAF71AFC8E2A00CAED79 /* PopOverViewController.m in Sources */,
+				F808CE411B0F2B2000124EE4 /* HomeViewController.m in Sources */,
 				F80DFC7F1B0DC2B200C1707F /* SLUser.m in Sources */,
 				F80EFAD31AFC569200CAED79 /* main.m in Sources */,
 				F815AE841B031ED50014E5E4 /* GVFileNotificationCenter.m in Sources */,
 				F8F457471B0053FA00E1D711 /* AMCStrechableButton.m in Sources */,
 				F80DFC7C1B0DB9BA00C1707F /* SLTask.m in Sources */,
 				F8F4574C1B00541C00E1D711 /* UIView.m in Sources */,
+				F808CE101B0EFD1600124EE4 /* INWindowButton.m in Sources */,
+				F808CE0F1B0EFD1600124EE4 /* INAppStoreWindow.m in Sources */,
 				F82D40BC1B0B0AD7007FD007 /* PopCalendarViewController.m in Sources */,
 				F8F457491B0053FA00E1D711 /* NSColor+AMC.m in Sources */,
 				F80EFAD11AFC569200CAED79 /* AppDelegate.m in Sources */,
 				F82D40C51B0B1C9A007FD007 /* EventButton.m in Sources */,
+				F808CE1A1B0F093D00124EE4 /* INWindowBackgroundView+CoreUIRendering.m in Sources */,
+				F808CE191B0F093D00124EE4 /* INAppStoreWindowSwizzling.c in Sources */,
 				F8F66F7E1B09D1FE006B7D97 /* UIBoxLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

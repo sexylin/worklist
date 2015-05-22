@@ -16,8 +16,6 @@
         NSBezierPath * path = [NSBezierPath bezierPathWithRoundedRect:self.bounds xRadius:0 yRadius:0];
         [[NSBezierPath bezierPathWithRect:dirtyRect] addClip];
         
-        
-        
         NSGradient * gradient1 = [[[NSGradient alloc] initWithStartingColor:self.startColor endingColor:self.endColor] autorelease];
         //    NSGradient * gradient2 = [[[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:1 alpha:1.0] endingColor:[NSColor colorWithCalibratedWhite:0 alpha:1.0]] autorelease];
         
