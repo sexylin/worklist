@@ -14,6 +14,7 @@
 #import "INAppStoreWindow.h"
 #import "INWindowButton.h"
 #import "HomeViewController.h"
+#import "SevenDaysDetailViewController.h"
 
 @interface AppDelegate ()
 

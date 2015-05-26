@@ -75,6 +75,8 @@
 		F8F66F771B09AD73006B7D97 /* alarm_on.png in Resources */ = {isa = PBXBuildFile; fileRef = F8F66F751B09AD73006B7D97 /* alarm_on.png */; };
 		F8F66F791B09BEFA006B7D97 /* category.png in Resources */ = {isa = PBXBuildFile; fileRef = F8F66F781B09BEFA006B7D97 /* category.png */; };
 		F8F66F7E1B09D1FE006B7D97 /* UIBoxLine.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F66F7D1B09D1FE006B7D97 /* UIBoxLine.m */; };
+		F8F7206A1B12F26100DC634F /* SevenDaysDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F720681B12F26100DC634F /* SevenDaysDetailViewController.m */; };
+		F8F7206B1B12F26100DC634F /* SevenDaysDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F720691B12F26100DC634F /* SevenDaysDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +184,9 @@
 		F8F66F781B09BEFA006B7D97 /* category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = category.png; path = worklist/category.png; sourceTree = "<group>"; };
 		F8F66F7C1B09D1FE006B7D97 /* UIBoxLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBoxLine.h; path = worklist/UIBoxLine.h; sourceTree = "<group>"; };
 		F8F66F7D1B09D1FE006B7D97 /* UIBoxLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIBoxLine.m; path = worklist/UIBoxLine.m; sourceTree = "<group>"; };
+		F8F720671B12F26100DC634F /* SevenDaysDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SevenDaysDetailViewController.h; path = worklist/SevenDaysDetailViewController.h; sourceTree = "<group>"; };
+		F8F720681B12F26100DC634F /* SevenDaysDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SevenDaysDetailViewController.m; path = worklist/SevenDaysDetailViewController.m; sourceTree = "<group>"; };
+		F8F720691B12F26100DC634F /* SevenDaysDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SevenDaysDetailViewController.xib; path = worklist/SevenDaysDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +271,9 @@
 		F80EFAC11AFC569200CAED79 = {
 			isa = PBXGroup;
 			children = (
+				F8F720671B12F26100DC634F /* SevenDaysDetailViewController.h */,
+				F8F720681B12F26100DC634F /* SevenDaysDetailViewController.m */,
+				F8F720691B12F26100DC634F /* SevenDaysDetailViewController.xib */,
 				F808CE3E1B0F2B2000124EE4 /* HomeViewController.h */,
 				F808CE3F1B0F2B2000124EE4 /* HomeViewController.m */,
 				F808CE401B0F2B2000124EE4 /* HomeViewController.xib */,
@@ -501,6 +509,7 @@
 				F808CE361B0F0AE600124EE4 /* zoom-activenokey-color.tiff in Resources */,
 				F80EFAF21AFC88E100CAED79 /* status_icon.png in Resources */,
 				F82D40C71B0B20A0007FD007 /* month_later_normal.png in Resources */,
+				F8F7206B1B12F26100DC634F /* SevenDaysDetailViewController.xib in Resources */,
 				F808CE391B0F0AE600124EE4 /* zoom-rollover-color.tiff in Resources */,
 				F82D40C11B0B117D007FD007 /* three_hours_later.png in Resources */,
 				F80EFAEF1AFC85C300CAED79 /* icon.icns in Resources */,
@@ -543,6 +552,7 @@
 				F808CE0F1B0EFD1600124EE4 /* INAppStoreWindow.m in Sources */,
 				F82D40BC1B0B0AD7007FD007 /* PopCalendarViewController.m in Sources */,
 				F8F457491B0053FA00E1D711 /* NSColor+AMC.m in Sources */,
+				F8F7206A1B12F26100DC634F /* SevenDaysDetailViewController.m in Sources */,
 				F80EFAD11AFC569200CAED79 /* AppDelegate.m in Sources */,
 				F82D40C51B0B1C9A007FD007 /* EventButton.m in Sources */,
 				F808CE1A1B0F093D00124EE4 /* INWindowBackgroundView+CoreUIRendering.m in Sources */,

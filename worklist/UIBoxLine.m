@@ -7,11 +7,12 @@
 //
 
 #import "UIBoxLine.h"
+#import "NSColor+AMC.h"
 
 @implementation UIBoxLine
 
 - (void)drawRect:(NSRect)dirtyRect {
-    [[NSColor grayColor] setFill];
+    [AMCMakeColor(205, 205, 205, 1.0f) setFill];
     NSRectFill(dirtyRect);
 }
 

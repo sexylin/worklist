@@ -67,11 +67,11 @@
             while (sqlite3_step(stmt) != SQLITE_DONE) {
                 SLTask *task = [[SLTask alloc]init];
                 task.taskID = sqlite3_column_int(stmt, 0);
-                task.taskDescription = [NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 3)];
+                task.taskDescription = [[NSString alloc]initWithUTF8String:sqlite3_column_text(stmt, 3)];
                 task.createDate = [CommonFunction dateFromString:[NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 1)]];
                 task.endDate = [CommonFunction dateFromString:[NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 2)]];
                 task.isComplete = sqlite3_column_int(stmt, 6);
-                task.addDescription = [NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 5)];
+                task.addDescription = [[NSString alloc]initWithUTF8String:sqlite3_column_text(stmt, 5)];
                 task.category = [NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 4)];
                 [tasks addObject:task];
                 [task release];
@@ -102,4 +102,97 @@
     }
 }
 
++ (NSRect)stringSizeBoundsToSize:(NSSize)size options:(NSStringDrawingOptions)options attributes:(NSDictionary *)atts string:(NSString *)str{
+    NSRect rect = [str boundingRectWithSize:size options:options attributes:atts];
+    return rect;
+}
+
++ (NSMutableArray *)tasksByCreateDate:(NSDate *)crDate{
+    NSString *monthAndDate = [CommonFunction onlyMonthAndDate:crDate];
+    
+    NSMutableArray *tasks = [NSMutableArray array];
+    sqlite3 *db;
+    sqlite3_stmt *stmt;
+    NSString *dbPath = [CommonFunction DBPath];
+    if(sqlite3_open([dbPath UTF8String], &db) == SQLITE_OK){
+        NSString *sql = [NSString stringWithFormat:@"SELECT * from task_list"];
+        if(sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, nil) == SQLITE_OK){
+            while (sqlite3_step(stmt) != SQLITE_DONE) {
+                NSDate *dbdate = [CommonFunction dateFromString:[NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 1)]];
+                NSString *dbMonthAndDate=  [CommonFunction onlyMonthAndDate:dbdate];
+                if([dbMonthAndDate isEqualToString:monthAndDate]){
+                    SLTask *task = [[SLTask alloc]init];
+                    task.taskID = sqlite3_column_int(stmt, 0);
+                    task.taskDescription = [[NSString alloc]initWithUTF8String:sqlite3_column_text(stmt, 3)];
+                    task.createDate = [CommonFunction dateFromString:[NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 1)]];
+                    task.endDate = dbdate;
+                    task.isComplete = sqlite3_column_int(stmt, 6);
+                    task.addDescription = [[NSString alloc]initWithUTF8String:sqlite3_column_text(stmt, 5)];
+                    task.category = [NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 4)];
+                    [tasks addObject:task];
+                    [task release];
+                }
+            }
+            sqlite3_finalize(stmt);
+        }
+        sqlite3_close(db);
+    }
+    return tasks;
+}
+
++ (NSMutableArray *)tasksByEndDate:(NSDate *)crDate{
+    NSString *monthAndDate = [CommonFunction onlyMonthAndDate:crDate];
+    
+    NSMutableArray *tasks = [NSMutableArray array];
+    sqlite3 *db;
+    sqlite3_stmt *stmt;
+    NSString *dbPath = [CommonFunction DBPath];
+    if(sqlite3_open([dbPath UTF8String], &db) == SQLITE_OK){
+        NSString *sql = [NSString stringWithFormat:@"SELECT * from task_list"];
+        if(sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, nil) == SQLITE_OK){
+            while (sqlite3_step(stmt) != SQLITE_DONE) {
+                NSDate *dbdate = [CommonFunction dateFromString:[NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 2)]];
+                NSString *dbMonthAndDate=  [CommonFunction onlyMonthAndDate:dbdate];
+                if([dbMonthAndDate isEqualToString:monthAndDate]){
+                    SLTask *task = [[SLTask alloc]init];
+                    task.taskID = sqlite3_column_int(stmt, 0);
+                    task.taskDescription = [[NSString alloc]initWithUTF8String:sqlite3_column_text(stmt, 3)];
+                    task.createDate = [CommonFunction dateFromString:[NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 1)]];
+                    task.endDate = dbdate;
+                    task.isComplete = sqlite3_column_int(stmt, 6);
+                    task.addDescription = [[NSString alloc]initWithUTF8String:sqlite3_column_text(stmt, 5)];
+                    task.category = [NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 4)];
+                    [tasks addObject:task];
+                    [task release];
+                }
+            }
+            sqlite3_finalize(stmt);
+        }
+        sqlite3_close(db);
+    }
+    return tasks;
+}
+
++ (NSString *)onlyMonthAndDate:(NSDate *)date{
+    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+    df.timeZone = [NSTimeZone systemTimeZone];
+    df.dateFormat = @"YYYY/MM/dd";
+    NSString *string = [df stringFromDate:date];
+    if(!string) return [df stringFromDate:[NSDate date]];
+    return string;
+}
+
++ (NSString *)dayDescription:(NSDate *)date{
+    NSCalendar *calendar=  [NSCalendar currentCalendar];
+    NSArray *monthSymb = [calendar monthSymbols];
+    NSDateComponents *dateCom = [calendar components:NSCalendarUnitMonth|NSCalendarUnitYear|NSCalendarUnitDay fromDate:date];
+    
+    NSInteger month = [dateCom month];
+    NSInteger day = [dateCom day];
+    NSInteger year = [dateCom year];
+    
+    NSString *monthString = [monthSymb objectAtIndex:month-1];
+    NSString *dayDescription = [NSString stringWithFormat:@"%@ %ld , %ld",monthString,day,year];
+    return dayDescription;
+}
 @end

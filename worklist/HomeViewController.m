@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "UIView.h"
 #import "NSColor+AMC.h"
+#import "SevenDaysDetailViewController.h"
 
 @interface HomeViewController ()
 
@@ -20,6 +21,10 @@
     [super awakeFromNib];
     _leftContentView.backgroundColor = AMCMakeColor(235, 235, 235, 1.0f);
     _rightContentView.backgroundColor = AMCMakeColor(255, 255, 255, 1.0f);
+    
+    SevenDaysDetailViewController *sevn = [[SevenDaysDetailViewController alloc]initWithNibName:@"SevenDaysDetailViewController" bundle:nil];
+    [_rightContentView addSubview:sevn.view];
+    
 }
 
 @end

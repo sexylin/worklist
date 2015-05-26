@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 
 @class SLTask;
 @interface CommonFunction : NSObject
@@ -17,4 +18,9 @@
 + (NSInteger)maxID;
 + (NSMutableArray *)allTasks;
 + (void)createTask:(SLTask *)task;
++ (NSMutableArray *)tasksByCreateDate:(NSDate *)crDate;
++ (NSMutableArray *)tasksByEndDate:(NSDate *)crDate;
++ (NSRect)stringSizeBoundsToSize:(NSSize)size options:(NSStringDrawingOptions)options attributes:(NSDictionary *)atts string:(NSString *)str;
++ (NSString *)onlyMonthAndDate:(NSDate *)date;
++ (NSString *)dayDescription:(NSDate *)date;
 @end
