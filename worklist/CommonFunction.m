@@ -195,4 +195,13 @@
     NSString *dayDescription = [NSString stringWithFormat:@"%@ %ld , %ld",monthString,day,year];
     return dayDescription;
 }
+
++ (NSString *)hourAndMinutesDescription:(NSDate *)date{
+    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+    df.timeZone = [NSTimeZone systemTimeZone];
+    df.dateFormat = @"HH:ss";
+    NSString *string = [df stringFromDate:date];
+    if(!string) return [df stringFromDate:[NSDate date]];
+    return string;
+}
 @end

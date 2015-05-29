@@ -9,6 +9,8 @@
 #import "SevenDaysDetailViewController.h"
 #import "SLTask.h"
 #import "CommonFunction.h"
+#import "NSColor+AMC.h"
+#import "SLTextFiled.h"
 
 @interface SevenDaysDetailViewController (){
     NSMutableArray *_sevenDays;
@@ -165,13 +167,19 @@
     
     NSRect descriptionRect = [CommonFunction stringSizeBoundsToSize:self.taskDescription.frame.size options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:self.taskDescription.font} string:_task.taskDescription];
     
-    self.frame = NSMakeRect(NSMinX(self.frame), NSMinY(self.frame), NSWidth(self.frame), NSHeight(descriptionRect)+30);
+    self.frame = NSMakeRect(NSMinX(self.frame), NSMinY(self.frame), NSWidth(self.frame), NSHeight(descriptionRect)+25);
+    self.cellView.frame = NSMakeRect(NSMinX(self.cellView.frame), NSMinY(self.cellView.frame), NSWidth(self.cellView.frame), NSHeight(self.frame));
     
-    self.taskDescription.frame = NSMakeRect(NSMinX(self.taskDescription.frame), NSMaxY(self.endDateText.frame)+2, NSWidth(self.taskDescription.frame), NSHeight(descriptionRect)+5);
+    self.taskDescription.frame = NSMakeRect(NSMinX(self.taskDescription.frame), NSMaxY(self.endDateText.frame)-5, NSWidth(self.taskDescription.frame), NSHeight(descriptionRect)+5);
     self.taskDescription.stringValue = _task.taskDescription;
     self.checkButton.frame = NSMakeRect(NSMinX(self.checkButton.frame), NSMaxY(self.taskDescription.frame)-NSHeight(self.checkButton.frame)-2, NSWidth(self.checkButton.frame), NSHeight(self.checkButton.frame));
     
-    self.endDateText.stringValue = [CommonFunction dayDescription:_task.endDate];
+    self.cellView.mouseinColor = AMCMakeColor(231, 231, 231, 1.0f);
+    self.cellView.backgorudColor = AMCMakeColor(255, 255, 255, 1.0f);
+    
+    self.endDateText.stringValue = [CommonFunction hourAndMinutesDescription:_task.endDate];
+    self.endDateText.drawUnderLine = YES;
+    self.endDateText.underLineColor = AMCMakeColor(169, 60, 32, 1.0f);
 }
 
 @end

@@ -87,55 +87,65 @@
             <point key="canvasLocation" x="327" y="-222"/>
         </customView>
         <customView id="wq4-6y-6rR" customClass="TaskRowView">
-            <rect key="frame" x="0.0" y="0.0" width="700" height="52"/>
+            <rect key="frame" x="0.0" y="0.0" width="700" height="42"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button id="jOI-gp-mSd">
-                    <rect key="frame" x="35" y="27" width="22" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="8zO-c4-DM8">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
-                <textField verticalHuggingPriority="750" id="OmZ-YJ-qHG">
-                    <rect key="frame" x="60" y="27" width="610" height="16"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" state="on" alignment="left" title="sahdiasd " id="ew6-8Z-Z7E">
-                        <font key="font" size="13" name="STHeitiSC-Light"/>
-                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <button id="Wk7-kA-deX">
-                    <rect key="frame" x="630" y="6" width="22" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="Euc-EP-h6Z">
-                        <behavior key="behavior" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="C7K-ce-hks">
-                    <rect key="frame" x="570" y="5" width="100" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="25 May,2015" id="ukN-fj-IE9">
-                        <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" red="0.61568627450980395" green="0.61568627450980395" blue="0.61568627450980395" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <customView id="lpf-F4-X0Q" customClass="UIBoxLine">
-                    <rect key="frame" x="60" y="1" width="610" height="1"/>
+                <customView id="mjl-Kh-Vk4" customClass="SLEventView">
+                    <rect key="frame" x="45" y="0.0" width="629" height="42"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button id="jOI-gp-mSd">
+                            <rect key="frame" x="0.0" y="17" width="22" height="18"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="8zO-c4-DM8">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <textField verticalHuggingPriority="750" id="OmZ-YJ-qHG">
+                            <rect key="frame" x="25" y="17" width="570" height="16"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" state="on" alignment="left" title="sahdiasd " id="ew6-8Z-Z7E">
+                                <font key="font" size="13" name="STHeitiSC-Light"/>
+                                <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="C7K-ce-hks" customClass="SLTextFiled">
+                            <rect key="frame" x="559" y="7" width="36" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="17:00" id="ukN-fj-IE9">
+                                <font key="font" metaFont="smallSystem"/>
+                                <color key="textColor" red="0.61568627450980395" green="0.61568627450980395" blue="0.61568627450980395" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <customView id="lpf-F4-X0Q" customClass="UIBoxLine">
+                            <rect key="frame" x="22" y="7" width="530" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        </customView>
+                        <button identifier="Push off" id="HH5-OM-2TT" customClass="EventButton">
+                            <rect key="frame" x="595" y="7" width="17" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="push_off_normal" imagePosition="only" alignment="center" alternateImage="push_off" imageScaling="proportionallyDown" inset="2" id="Pv8-KU-d5y">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                    </subviews>
                 </customView>
             </subviews>
             <connections>
+                <outlet property="cellView" destination="mjl-Kh-Vk4" id="8vF-2m-zjq"/>
                 <outlet property="checkButton" destination="jOI-gp-mSd" id="g6l-RU-lZx"/>
                 <outlet property="endDateText" destination="C7K-ce-hks" id="Jyw-O0-AxQ"/>
-                <outlet property="pushoffButton" destination="Wk7-kA-deX" id="dqK-aX-Kxv"/>
                 <outlet property="taskDescription" destination="OmZ-YJ-qHG" id="1A0-fe-tWq"/>
             </connections>
             <point key="canvasLocation" x="327" y="-361"/>
         </customView>
     </objects>
+    <resources>
+        <image name="push_off" width="88" height="88"/>
+        <image name="push_off_normal" width="88" height="88"/>
+    </resources>
 </document>

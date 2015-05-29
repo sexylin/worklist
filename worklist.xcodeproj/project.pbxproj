@@ -50,6 +50,10 @@
 		F80EFAF81AFC8E2A00CAED79 /* PopOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80EFAF61AFC8E2A00CAED79 /* PopOverViewController.xib */; };
 		F80EFAFC1AFCA81200CAED79 /* work_list_fon.png in Resources */ = {isa = PBXBuildFile; fileRef = F80EFAFA1AFCA81200CAED79 /* work_list_fon.png */; };
 		F80EFAFE1AFCA90400CAED79 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F80EFAFD1AFCA90400CAED79 /* add_button.png */; };
+		F813ACE81B183892002D859E /* SLTextFiled.m in Sources */ = {isa = PBXBuildFile; fileRef = F813ACE71B183892002D859E /* SLTextFiled.m */; };
+		F813ACEB1B1842F6002D859E /* SLEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = F813ACEA1B1842F6002D859E /* SLEventView.m */; };
+		F813ACEE1B185C69002D859E /* push_off.png in Resources */ = {isa = PBXBuildFile; fileRef = F813ACEC1B185C69002D859E /* push_off.png */; };
+		F813ACEF1B185C69002D859E /* push_off_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = F813ACED1B185C69002D859E /* push_off_normal.png */; };
 		F815AE841B031ED50014E5E4 /* GVFileNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F815AE831B031ED50014E5E4 /* GVFileNotificationCenter.m */; };
 		F82D40B41B0B0A26007FD007 /* last_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F82D40AF1B0B0A26007FD007 /* last_icon.png */; };
 		F82D40B51B0B0A26007FD007 /* month_later.png in Resources */ = {isa = PBXBuildFile; fileRef = F82D40B01B0B0A26007FD007 /* month_later.png */; };
@@ -150,6 +154,12 @@
 		F80EFAF61AFC8E2A00CAED79 /* PopOverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopOverViewController.xib; path = worklist/PopOverViewController.xib; sourceTree = "<group>"; };
 		F80EFAFA1AFCA81200CAED79 /* work_list_fon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = work_list_fon.png; path = worklist/work_list_fon.png; sourceTree = "<group>"; };
 		F80EFAFD1AFCA90400CAED79 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add_button.png; path = worklist/add_button.png; sourceTree = "<group>"; };
+		F813ACE61B183892002D859E /* SLTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLTextFiled.h; path = worklist/SLTextFiled.h; sourceTree = "<group>"; };
+		F813ACE71B183892002D859E /* SLTextFiled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLTextFiled.m; path = worklist/SLTextFiled.m; sourceTree = "<group>"; };
+		F813ACE91B1842F6002D859E /* SLEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLEventView.h; path = worklist/SLEventView.h; sourceTree = "<group>"; };
+		F813ACEA1B1842F6002D859E /* SLEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLEventView.m; path = worklist/SLEventView.m; sourceTree = "<group>"; };
+		F813ACEC1B185C69002D859E /* push_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push_off.png; sourceTree = "<group>"; };
+		F813ACED1B185C69002D859E /* push_off_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push_off_normal.png; sourceTree = "<group>"; };
 		F815AE821B031ED50014E5E4 /* GVFileNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GVFileNotificationCenter.h; path = worklist/GVFileNotificationCenter.h; sourceTree = "<group>"; };
 		F815AE831B031ED50014E5E4 /* GVFileNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GVFileNotificationCenter.m; path = worklist/GVFileNotificationCenter.m; sourceTree = "<group>"; };
 		F82D40AF1B0B0A26007FD007 /* last_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = last_icon.png; path = worklist/last_icon.png; sourceTree = "<group>"; };
@@ -211,6 +221,8 @@
 		F8002FC91B0C80DA002CBB4C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F813ACEC1B185C69002D859E /* push_off.png */,
+				F813ACED1B185C69002D859E /* push_off_normal.png */,
 				F80DFC781B0DB46700C1707F /* user_data.sqlite */,
 				F8002FCA1B0C810E002CBB4C /* add_to_list.png */,
 			);
@@ -271,6 +283,10 @@
 		F80EFAC11AFC569200CAED79 = {
 			isa = PBXGroup;
 			children = (
+				F813ACE91B1842F6002D859E /* SLEventView.h */,
+				F813ACEA1B1842F6002D859E /* SLEventView.m */,
+				F813ACE61B183892002D859E /* SLTextFiled.h */,
+				F813ACE71B183892002D859E /* SLTextFiled.m */,
 				F8F720671B12F26100DC634F /* SevenDaysDetailViewController.h */,
 				F8F720681B12F26100DC634F /* SevenDaysDetailViewController.m */,
 				F8F720691B12F26100DC634F /* SevenDaysDetailViewController.xib */,
@@ -497,6 +513,7 @@
 				F808CE371B0F0AE600124EE4 /* zoom-inactive-disabled-color.tiff in Resources */,
 				F82D40CC1B0B3505007FD007 /* hour_later_nomal.png in Resources */,
 				F82D40B61B0B0A26007FD007 /* next_icon.png in Resources */,
+				F813ACEF1B185C69002D859E /* push_off_normal.png in Resources */,
 				F80EFAFC1AFCA81200CAED79 /* work_list_fon.png in Resources */,
 				F808CE2C1B0F0AE600124EE4 /* close-activenokey-color.tiff in Resources */,
 				F82D40B81B0B0A26007FD007 /* week_later.png in Resources */,
@@ -508,6 +525,7 @@
 				F8002FCB1B0C810E002CBB4C /* add_to_list.png in Resources */,
 				F808CE361B0F0AE600124EE4 /* zoom-activenokey-color.tiff in Resources */,
 				F80EFAF21AFC88E100CAED79 /* status_icon.png in Resources */,
+				F813ACEE1B185C69002D859E /* push_off.png in Resources */,
 				F82D40C71B0B20A0007FD007 /* month_later_normal.png in Resources */,
 				F8F7206B1B12F26100DC634F /* SevenDaysDetailViewController.xib in Resources */,
 				F808CE391B0F0AE600124EE4 /* zoom-rollover-color.tiff in Resources */,
@@ -540,6 +558,7 @@
 				F8F457481B0053FA00E1D711 /* NSButton+Addation.m in Sources */,
 				F80DFC401B0D842500C1707F /* CommonFunction.m in Sources */,
 				F8007E401B01FA4400DA161B /* NSTextFielAddition.m in Sources */,
+				F813ACEB1B1842F6002D859E /* SLEventView.m in Sources */,
 				F80EFAF71AFC8E2A00CAED79 /* PopOverViewController.m in Sources */,
 				F808CE411B0F2B2000124EE4 /* HomeViewController.m in Sources */,
 				F80DFC7F1B0DC2B200C1707F /* SLUser.m in Sources */,
@@ -555,6 +574,7 @@
 				F8F7206A1B12F26100DC634F /* SevenDaysDetailViewController.m in Sources */,
 				F80EFAD11AFC569200CAED79 /* AppDelegate.m in Sources */,
 				F82D40C51B0B1C9A007FD007 /* EventButton.m in Sources */,
+				F813ACE81B183892002D859E /* SLTextFiled.m in Sources */,
 				F808CE1A1B0F093D00124EE4 /* INWindowBackgroundView+CoreUIRendering.m in Sources */,
 				F808CE191B0F093D00124EE4 /* INAppStoreWindowSwizzling.c in Sources */,
 				F8F66F7E1B09D1FE006B7D97 /* UIBoxLine.m in Sources */,

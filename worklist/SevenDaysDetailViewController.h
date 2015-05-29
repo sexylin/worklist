@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SLEventView.h"
 
 @class SLTask;
 @interface SevenDaysDetailViewController : NSViewController
@@ -21,13 +22,15 @@
 @property (nonatomic,retain)NSDate *date;
 @end
 
+@class SLTextFiled;
 @interface TaskRowView : NSView{
     SLTask *_task;
 }
 @property (assign)IBOutlet NSTextField *taskDescription;
-@property (assign)IBOutlet NSTextField *endDateText;
+@property (assign)IBOutlet SLTextFiled *endDateText;
 @property (assign)IBOutlet NSButton *checkButton;
 @property (assign)IBOutlet NSButton *pushoffButton;
+@property (assign)IBOutlet SLEventView *cellView;
 @property (nonatomic,retain)SLTask *task;
 
 - (void)setTask:(SLTask *)task;

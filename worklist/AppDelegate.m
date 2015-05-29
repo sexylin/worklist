@@ -58,6 +58,8 @@
     HomeViewController *homeVC = [[HomeViewController alloc]initWithNibName:@"HomeViewController" bundle:nil];
 //    homeVC.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.window.frame), CGRectGetHeight(self.window.frame));
     [self.window.contentView addSubview:homeVC.view];
+    
+    [self.window center];
 }
 
 - (void)setupCloseButton
@@ -105,6 +107,11 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag{
+    [self.window makeKeyAndOrderFront:nil];
+    return YES;
 }
 
 @end

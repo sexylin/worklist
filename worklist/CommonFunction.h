@@ -23,4 +23,5 @@
 + (NSRect)stringSizeBoundsToSize:(NSSize)size options:(NSStringDrawingOptions)options attributes:(NSDictionary *)atts string:(NSString *)str;
 + (NSString *)onlyMonthAndDate:(NSDate *)date;
 + (NSString *)dayDescription:(NSDate *)date;
++ (NSString *)hourAndMinutesDescription:(NSDate *)date;
 @end
