@@ -20,5 +20,6 @@
 }
 @property (assign) IBOutlet PopCalendarViewController *calendar;
 
+- (void)closePop;
 @end
 

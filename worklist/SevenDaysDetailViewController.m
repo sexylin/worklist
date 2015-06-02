@@ -11,6 +11,7 @@
 #import "CommonFunction.h"
 #import "NSColor+AMC.h"
 #import "SLTextFiled.h"
+#import "common.h"
 
 @interface SevenDaysDetailViewController (){
     NSMutableArray *_sevenDays;
@@ -22,6 +23,8 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateView) name:POST_UPDATE_SEVENDAYS_NOTI object:nil];
+    _detailDic = [[NSMutableDictionary alloc]init];
     [self alignView];
 }
 
@@ -29,7 +32,7 @@
     if(!_sevenDays){
         _sevenDays = [[NSMutableArray alloc]init];
     }else{
-        [_sevenDays removeAllObjects];
+        return;
     }
     
     NSDate *now = [NSDate date];
@@ -53,6 +56,10 @@
     }];
 }
 
+- (void)updateView{
+    [self alignView];
+}
+
 - (void)alignView{
     [self initSevenDays];
     NSInteger count = [_sevenDays count];
@@ -62,7 +69,13 @@
     float yOrign = mainHeight-15;
     for(NSInteger i=0;i<count;i++){
         NSDate *date = [_sevenDays objectAtIndex:i];
-        OneDayDetailView *onedayView = [SevenDaysDetailViewController oneDayDetailView:date];
+        OneDayDetailView *onedayView = [_detailDic objectForKey:date];
+        if(!onedayView){
+            onedayView = [SevenDaysDetailViewController oneDayDetailView:date];
+            [_detailDic setObject:onedayView forKey:date];
+        }else{
+            [onedayView updateRowView];
+        }
         onedayView.frame = NSMakeRect(NSMinX(onedayView.frame), yOrign-NSHeight(onedayView.frame), NSWidth(onedayView.frame), NSHeight(onedayView.frame));
         yOrign -= NSHeight(onedayView.frame);
         [self.contentView addSubview:onedayView];
@@ -93,8 +106,14 @@
 
 @implementation OneDayDetailView{
     NSMutableArray *_tasks;
+    NSMutableDictionary *_rowDics;
 }
 @synthesize date = _date;
+
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    _rowDics = [[NSMutableDictionary alloc]init];
+}
 
 - (void)setDate:(NSDate *)date{
     _date = [date retain];
@@ -121,6 +140,22 @@
     }];
     [_tasks addObjectsFromArray:dateTasks];
     [self alignView];
+}
+
+- (void)updateRowView{
+    
+    NSMutableArray *removeArr = [NSMutableArray array];
+    for(NSView *subView in self.subviews){
+        if([[subView class]isSubclassOfClass:[TaskRowView class]]){
+            [removeArr addObject:subView];
+        }
+    }
+    
+    for(NSView *row in removeArr){
+        [row removeFromSuperview];
+    }
+    
+    [self setDate:_date];
 }
 
 - (void)alignView{
@@ -174,6 +209,7 @@
     self.taskDescription.stringValue = _task.taskDescription;
     self.checkButton.frame = NSMakeRect(NSMinX(self.checkButton.frame), NSMaxY(self.taskDescription.frame)-NSHeight(self.checkButton.frame)-2, NSWidth(self.checkButton.frame), NSHeight(self.checkButton.frame));
     
+    self.cellView.delegate = self;
     self.cellView.mouseinColor = AMCMakeColor(231, 231, 231, 1.0f);
     self.cellView.backgorudColor = AMCMakeColor(255, 255, 255, 1.0f);
     
@@ -182,4 +218,25 @@
     self.endDateText.underLineColor = AMCMakeColor(169, 60, 32, 1.0f);
 }
 
+- (IBAction)clickPushOff:(NSButton *)sender{
+    if(!_calendar){
+        _calendar = [[PopCalendarViewController alloc]initWithNibName:@"PopCalendarViewController" bundle:nil];
+    }
+    _calendar.selectDate = _task.endDate;
+    [_calendar setCompletionHandler:^(NSDate *date) {
+        _task.endDate = date;
+        [CommonFunction updateTask:_task];
+        self.endDateText.stringValue = [CommonFunction hourAndMinutesDescription:date];
+        [[NSNotificationCenter defaultCenter]postNotificationName:POST_UPDATE_SEVENDAYS_NOTI object:nil];
+    }];
+    [_calendar showInView:sender];
+}
+
+#pragma mark - SLEventViewDelegate
+- (void)mouseEnterEvent:(SLEventView *)view{
+    [self.pushoffButton setHidden:NO];
+}
+- (void)mouseExitEvent:(SLEventView *)view{
+    [self.pushoffButton setHidden:YES];
+}
 @end

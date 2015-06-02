@@ -34,11 +34,17 @@
 - (void)mouseEntered:(NSEvent *)theEvent{
     _mouseIn = YES;
     [self setNeedsDisplay:YES];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(mouseEnterEvent:)]){
+        [self.delegate mouseEnterEvent:self];
+    }
 }
 
 - (void)mouseExited:(NSEvent *)theEvent{
     _mouseIn = NO;
     [self setNeedsDisplay:YES];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(mouseExitEvent:)]){
+        [self.delegate mouseExitEvent:self];
+    }
 }
 
 @end

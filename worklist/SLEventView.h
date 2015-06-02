@@ -21,5 +21,5 @@
 }
 @property (nonatomic,retain)NSColor *backgorudColor;
 @property (nonatomic,retain)NSColor *mouseinColor;
-@property (nonatomic,assign)NSObject *delegate;
+@property (nonatomic,assign)NSObject <SLEventViewDelegate> *delegate;
 @end

@@ -13,23 +13,33 @@
 @end
 
 @implementation PopCalendarViewController
+@synthesize limitMinDate;
+@synthesize selectDate;
 
 - (void)awakeFromNib{
     [super awakeFromNib];
     
-    _picker.minDate = [NSDate date];
-    _hourPicker.minDate = [NSDate date];
+    if(limitMinDate){
+        _picker.minDate = limitMinDate;
+        _hourPicker.minDate = limitMinDate;
+    }
     
-    _popOver = [[NSPopover alloc]init];
-    _popOver.behavior = NSPopoverBehaviorSemitransient;
-    _popOver.delegate = self;
-    
-    NSViewController *vc = [[NSViewController alloc]init];
-    vc.view = self.view;
-    [_popOver setContentViewController:vc];
+    if(selectDate){
+        _picker.dateValue = selectDate;
+        _hourPicker.dateValue = selectDate;
+    }
 }
 
 - (void)showInView:(NSView *)view{
+    if(!_popOver){
+        _popOver = [[NSPopover alloc]init];
+        _popOver.behavior = NSPopoverBehaviorSemitransient;
+        _popOver.delegate = self;
+        
+        NSViewController *vc = [[NSViewController alloc]init];
+        vc.view = self.view;
+        [_popOver setContentViewController:vc];
+    }
     if(![_popOver isShown]){
         [_popOver showRelativeToRect:NSZeroRect ofView:view preferredEdge:CGRectMinYEdge];
     }
@@ -41,7 +51,7 @@
 
 #pragma mark ---- button methods
 - (IBAction)oneHourLater:(id)sender{
-    NSDate *date = [NSDate date];
+    NSDate *date = _picker.dateValue;
     NSDate *newDate = [date dateByAddingTimeInterval:60*60];
     _picker.dateValue = newDate;
     _hourPicker.dateValue = newDate;
@@ -49,7 +59,7 @@
 }
 
 - (IBAction)threeHoursLater:(id)sender{
-    NSDate *date = [NSDate date];
+    NSDate *date = _picker.dateValue;
     NSDate *newDate = [date dateByAddingTimeInterval:3*60*60];
     _picker.dateValue = newDate;
     _hourPicker.dateValue = newDate;
@@ -57,7 +67,7 @@
 }
 
 - (IBAction)tomorrow:(id)sender{
-    NSDate *date = [NSDate date];
+    NSDate *date = _picker.dateValue;
     NSDate *newDate = [date dateByAddingTimeInterval:24*60*60];
     _picker.dateValue = newDate;
     _hourPicker.dateValue = newDate;
@@ -65,7 +75,7 @@
 }
 
 - (IBAction)aWeekLater:(id)sender{
-    NSDate *date = [NSDate date];
+    NSDate *date = _picker.dateValue;
     NSDate *newDate = [date dateByAddingTimeInterval:7*24*60*60];
     _picker.dateValue = newDate;
     _hourPicker.dateValue = newDate;
@@ -73,14 +83,14 @@
 }
 
 - (IBAction)oneMonthLater:(id)sender{
-    NSDate *date = [NSDate date];
+    NSDate *date = _picker.dateValue;
     NSDate *newDate = [date dateByAddingTimeInterval:30*24*60*60];
     _picker.dateValue = newDate;
     _hourPicker.dateValue = newDate;
     [self close];
 }
 
-- (void)setCompletionHandler:(void (^)(NSString *dateFormat))handler{
+- (void)setCompletionHandler:(void (^)(NSDate *date))handler{
     _completionHandler = [handler copy];
 }
 
@@ -98,6 +108,6 @@
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
     dateFormat.timeZone = [NSTimeZone systemTimeZone];
     dateFormat.dateFormat = @"YYYY/MM/dd HH:mm";
-    _completionHandler([dateFormat stringFromDate:_picker.dateValue]);
+    _completionHandler(_picker.dateValue);
 }
 @end

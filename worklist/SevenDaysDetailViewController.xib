@@ -124,13 +124,16 @@
                             <rect key="frame" x="22" y="7" width="530" height="1"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         </customView>
-                        <button identifier="Push off" id="HH5-OM-2TT" customClass="EventButton">
-                            <rect key="frame" x="595" y="7" width="17" height="17"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <button identifier="Push off" hidden="YES" id="HH5-OM-2TT" customClass="EventButton">
+                            <rect key="frame" x="600" y="7" width="17" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="push_off_normal" imagePosition="only" alignment="center" alternateImage="push_off" imageScaling="proportionallyDown" inset="2" id="Pv8-KU-d5y">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="clickPushOff:" target="wq4-6y-6rR" id="P6S-LG-PuD"/>
+                            </connections>
                         </button>
                     </subviews>
                 </customView>
@@ -139,6 +142,7 @@
                 <outlet property="cellView" destination="mjl-Kh-Vk4" id="8vF-2m-zjq"/>
                 <outlet property="checkButton" destination="jOI-gp-mSd" id="g6l-RU-lZx"/>
                 <outlet property="endDateText" destination="C7K-ce-hks" id="Jyw-O0-AxQ"/>
+                <outlet property="pushoffButton" destination="HH5-OM-2TT" id="nEq-B9-p7j"/>
                 <outlet property="taskDescription" destination="OmZ-YJ-qHG" id="1A0-fe-tWq"/>
             </connections>
             <point key="canvasLocation" x="327" y="-361"/>

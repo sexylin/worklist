@@ -11,12 +11,14 @@
 @interface PopCalendarViewController : NSViewController<NSPopoverDelegate>{
     IBOutlet NSDatePicker *_hourPicker;
     NSPopover *_popOver;
-    void (^_completionHandler)(NSString *dateFormat);
+    void (^_completionHandler)(NSDate *date);
 }
 
 @property (assign) IBOutlet NSDatePicker *picker;
+@property (nonatomic,retain) NSDate *limitMinDate;
+@property (nonatomic,retain) NSDate *selectDate;
 
 - (void)showInView:(NSView *)view;
 - (void)close;
-- (void)setCompletionHandler:(void (^)(NSString *dateFormat))handler;
+- (void)setCompletionHandler:(void (^)(NSDate *date))handler;
 @end

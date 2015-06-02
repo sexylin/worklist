@@ -102,6 +102,24 @@
     }
 }
 
++ (void)updateTask:(SLTask *)task{
+    sqlite3 *db;
+    sqlite3_stmt *stmt;
+    NSString *dbPath = [CommonFunction DBPath];
+    if(sqlite3_open([dbPath UTF8String], &db) == SQLITE_OK){
+        NSString *sql = [NSString stringWithFormat:@"UPDATE task_list set 'create_time'='%@','end_time'='%@','desription'='%@','category'='%@','add_description'='%@','is_complete'=%ld where task_id=%ld",[CommonFunction stringFromDate:task.createDate],[CommonFunction stringFromDate:task.endDate],task.taskDescription,task.category,task.addDescription,task.isComplete,task.taskID];
+        if(sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, nil) == SQLITE_OK){
+            char *error = NULL;
+            sqlite3_exec(db, [sql UTF8String], nil, nil, &error);
+            if(error){
+                NSLog(@"%s",error);
+            }
+        }
+        sqlite3_finalize(stmt);
+        sqlite3_close(db);
+    }
+}
+
 + (NSRect)stringSizeBoundsToSize:(NSSize)size options:(NSStringDrawingOptions)options attributes:(NSDictionary *)atts string:(NSString *)str{
     NSRect rect = [str boundingRectWithSize:size options:options attributes:atts];
     return rect;
@@ -151,17 +169,17 @@
         NSString *sql = [NSString stringWithFormat:@"SELECT * from task_list"];
         if(sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, nil) == SQLITE_OK){
             while (sqlite3_step(stmt) != SQLITE_DONE) {
-                NSDate *dbdate = [CommonFunction dateFromString:[NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 2)]];
+                NSDate *dbdate = [CommonFunction dateFromString:[NSString stringWithCString:(const char *)sqlite3_column_text(stmt, 2)  encoding:NSUTF8StringEncoding]];
                 NSString *dbMonthAndDate=  [CommonFunction onlyMonthAndDate:dbdate];
                 if([dbMonthAndDate isEqualToString:monthAndDate]){
                     SLTask *task = [[SLTask alloc]init];
                     task.taskID = sqlite3_column_int(stmt, 0);
-                    task.taskDescription = [[NSString alloc]initWithUTF8String:sqlite3_column_text(stmt, 3)];
-                    task.createDate = [CommonFunction dateFromString:[NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 1)]];
+                    task.taskDescription = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(stmt, 3)];
+                    task.createDate = [CommonFunction dateFromString:[NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)]];
                     task.endDate = dbdate;
                     task.isComplete = sqlite3_column_int(stmt, 6);
-                    task.addDescription = [[NSString alloc]initWithUTF8String:sqlite3_column_text(stmt, 5)];
-                    task.category = [NSString stringWithFormat:@"%s",sqlite3_column_text(stmt, 4)];
+                    task.addDescription = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
+                    task.category = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 4)];
                     [tasks addObject:task];
                     [task release];
                 }
@@ -177,6 +195,15 @@
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
     df.timeZone = [NSTimeZone systemTimeZone];
     df.dateFormat = @"YYYY/MM/dd";
+    NSString *string = [df stringFromDate:date];
+    if(!string) return [df stringFromDate:[NSDate date]];
+    return string;
+}
+
++ (NSString *)fullDateDescription:(NSDate *)date{
+    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+    df.timeZone = [NSTimeZone systemTimeZone];
+    df.dateFormat = @"YYYY/MM/dd HH:mm";
     NSString *string = [df stringFromDate:date];
     if(!string) return [df stringFromDate:[NSDate date]];
     return string;
@@ -199,7 +226,7 @@
 + (NSString *)hourAndMinutesDescription:(NSDate *)date{
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
     df.timeZone = [NSTimeZone systemTimeZone];
-    df.dateFormat = @"HH:ss";
+    df.dateFormat = @"HH:mm";
     NSString *string = [df stringFromDate:date];
     if(!string) return [df stringFromDate:[NSDate date]];
     return string;

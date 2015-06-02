@@ -9,5 +9,18 @@
 #import "SLTask.h"
 
 @implementation SLTask
-@synthesize endDate,category,description,addDescription,isComplete,createDate,taskID;
+@synthesize endDate,category,taskDescription,addDescription,isComplete,createDate,taskID;
+
+- (id)init{
+    if(self = [super init]){
+        self.endDate = [NSDate date];
+        self.category = @"";
+        self.taskDescription = @"";
+        self.addDescription = @"";
+        self.isComplete = NO;
+        self.createDate = [NSDate date];
+        self.taskID = 0;
+    }
+    return self;
+}
 @end

@@ -19,17 +19,7 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <viewController id="4J7-zy-0Ex" userLabel="Popover View Controller" customClass="PopOverViewController">
-            <connections>
-                <outlet property="popOver" destination="kgE-li-rpz" id="yez-zI-hkr"/>
-            </connections>
-        </viewController>
-        <popover id="kgE-li-rpz">
-            <connections>
-                <outlet property="contentViewController" destination="4J7-zy-0Ex" id="Lpg-Tt-UYK"/>
-                <outlet property="delegate" destination="4J7-zy-0Ex" id="eNZ-p6-zqU"/>
-            </connections>
-        </popover>
+        <popover id="kgE-li-rpz"/>
         <viewController id="xCd-Hs-rC3" customClass="PopCalendarViewController"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>

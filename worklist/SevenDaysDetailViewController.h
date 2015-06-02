@@ -10,9 +10,13 @@
 #import "SLEventView.h"
 
 @class SLTask;
-@interface SevenDaysDetailViewController : NSViewController
+@interface SevenDaysDetailViewController : NSViewController{
+    NSMutableDictionary *_detailDic;
+}
 @property (assign)IBOutlet NSView *contentView;
 @property (assign)IBOutlet NSScrollView *scroll;
+
+- (void)updateView;
 @end
 
 @interface OneDayDetailView : NSView
@@ -20,11 +24,14 @@
 @property (assign)IBOutlet NSTextField *weekText;
 @property (assign)IBOutlet NSTextField *dateText;
 @property (nonatomic,retain)NSDate *date;
+- (void)updateRowView;
 @end
 
 @class SLTextFiled;
-@interface TaskRowView : NSView{
+@class PopCalendarViewController;
+@interface TaskRowView : NSView<SLEventViewDelegate>{
     SLTask *_task;
+    PopCalendarViewController *_calendar;
 }
 @property (assign)IBOutlet NSTextField *taskDescription;
 @property (assign)IBOutlet SLTextFiled *endDateText;
@@ -34,4 +41,5 @@
 @property (nonatomic,retain)SLTask *task;
 
 - (void)setTask:(SLTask *)task;
+- (IBAction)clickPushOff:(NSButton *)sender;
 @end

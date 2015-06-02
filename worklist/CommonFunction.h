@@ -18,10 +18,12 @@
 + (NSInteger)maxID;
 + (NSMutableArray *)allTasks;
 + (void)createTask:(SLTask *)task;
++ (void)updateTask:(SLTask *)task;
 + (NSMutableArray *)tasksByCreateDate:(NSDate *)crDate;
 + (NSMutableArray *)tasksByEndDate:(NSDate *)crDate;
 + (NSRect)stringSizeBoundsToSize:(NSSize)size options:(NSStringDrawingOptions)options attributes:(NSDictionary *)atts string:(NSString *)str;
 + (NSString *)onlyMonthAndDate:(NSDate *)date;
++ (NSString *)fullDateDescription:(NSDate *)date;
 + (NSString *)dayDescription:(NSDate *)date;
 + (NSString *)hourAndMinutesDescription:(NSDate *)date;
 @end

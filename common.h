@@ -14,5 +14,6 @@
 #import "NSColor+AMC.h"
 
 #define __AppDelegate__ ((AppDelegate *)([NSApplication sharedApplication].delegate))
+#define POST_UPDATE_SEVENDAYS_NOTI @"POST_UPDATE_SEVENDAYS_NOTI"
 
 #endif

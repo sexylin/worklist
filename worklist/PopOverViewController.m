@@ -36,8 +36,9 @@
 }
 
 - (IBAction)clickCalendar:(NSButton *)sender{
-    [__AppDelegate__.calendar setCompletionHandler:^(NSString *dateFormat) {
-        _dateText.stringValue = dateFormat;
+    __AppDelegate__.calendar.limitMinDate = [NSDate date];
+    [__AppDelegate__.calendar setCompletionHandler:^(NSDate *date) {
+        _dateText.stringValue = [CommonFunction fullDateDescription:date];
     }];
     [__AppDelegate__.calendar showInView:sender];
 }
@@ -56,6 +57,8 @@
         task.isComplete = 0;
         [CommonFunction createTask:task];
         [task release];
+        [__AppDelegate__ closePop];
+        [[NSNotificationCenter defaultCenter]postNotificationName:POST_UPDATE_SEVENDAYS_NOTI object:nil];
     }else{
         if([category length] == 0){
             _categoryText.wrong = YES;

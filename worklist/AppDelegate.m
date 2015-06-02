@@ -97,12 +97,19 @@
 
 - (void)popUpStatusView{
     if(!_isShow){
+        PopOverViewController *contentVC = [[[PopOverViewController alloc]initWithNibName:@"PopOverViewController" bundle:nil]autorelease];
+        _popOver.contentViewController = contentVC;
         [_popOver showRelativeToRect:_sysItem.view.bounds ofView:_sysItem.view preferredEdge:NSMaxYEdge];
         _isShow = YES;
     }else{
         [_popOver close];
         _isShow = NO;
     }
+}
+
+- (void)closePop{
+    [_popOver close];
+    _isShow = NO;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
