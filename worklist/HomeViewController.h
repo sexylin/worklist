@@ -7,11 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SLItemView.h"
 
 @class UIView;
-@interface HomeViewController : NSViewController{
+@class SLItemView;
+@interface HomeViewController : NSViewController<SLItemViewDelegate>{
     IBOutlet UIView *_leftContentView;
     IBOutlet UIView *_rightContentView;
+    
+    IBOutlet SLItemView *_overdueItem;
+    IBOutlet SLItemView *_next7Days;
 }
 
 @end

@@ -53,6 +53,10 @@
         NSImage* image2 =[NSImage imageNamed:@"right_bar"];
 
         [image2 drawInRect:NSMakeRect(left_width, 0, NSWidth(self.window.frame) - left_width, 32) fromRect:NSMakeRect(0, 0, image2.size.width, 32) operation:NSCompositeSourceOver fraction:1.0];
+        
+        NSRect boxline = NSMakeRect(left_width+25, 0, NSWidth(self.window.frame)-left_width-50, 1);
+        [AMCMakeColor(205, 205, 205, 1.0f) setFill];
+        NSRectFill(boxline);
     };
     
     HomeViewController *homeVC = [[HomeViewController alloc]initWithNibName:@"HomeViewController" bundle:nil];

@@ -24,11 +24,22 @@
     }
 }
 
+- (id)initWithFrame:(NSRect)frameRect{
+    if(self = [super initWithFrame:frameRect]){
+        NSTrackingArea *trackArea = [[NSTrackingArea alloc]initWithRect:self.frame options:NSTrackingMouseEnteredAndExited|NSTrackingActiveAlways|NSTrackingInVisibleRect owner:self userInfo:nil];
+        [self addTrackingArea:trackArea];
+        [trackArea release];
+    }
+    return self;
+}
+
 - (void)awakeFromNib{
     [super awakeFromNib];
-    NSTrackingArea *trackArea = [[NSTrackingArea alloc]initWithRect:self.bounds options:NSTrackingMouseEnteredAndExited|NSTrackingActiveAlways|NSTrackingAssumeInside owner:self userInfo:nil];
-    [self addTrackingArea:trackArea];
-    [trackArea release];
+    
+}
+
+- (BOOL)acceptsFirstMouse:(NSEvent *)theEvent{
+    return YES;
 }
 
 - (void)mouseEntered:(NSEvent *)theEvent{
@@ -47,4 +58,9 @@
     }
 }
 
+- (void)mouseDown:(NSEvent *)theEvent{
+    if(self.delegate && [self.delegate respondsToSelector:@selector(mouseDownEvent:)]){
+        [self.delegate mouseDownEvent:self];
+    }
+}
 @end

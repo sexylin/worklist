@@ -14,6 +14,7 @@
 @optional
 - (void)mouseEnterEvent:(SLEventView *)view;
 - (void)mouseExitEvent:(SLEventView *)view;
+- (void)mouseDownEvent:(SLEventView *)view;
 @end
 
 @interface SLEventView : NSView{

@@ -12,7 +12,7 @@
 
 @end
 NS_INLINE NSColor *AMCMakeColor(CGFloat red, CGFloat blue, CGFloat green, CGFloat alpha){
-    return  [NSColor colorWithCalibratedRed:red/255.0 green:blue/255.0 blue:green/255.0 alpha:alpha];
+    return  [NSColor colorWithRed:red/255.0 green:blue/255.0 blue:green/255.0 alpha:alpha];
 };
 NS_INLINE NSColor *ColorWithCGColor(CGColorRef aColorRef){
     NSColorSpace *colorSpace = [[NSColorSpace alloc] initWithCGColorSpace:CGColorGetColorSpace(aColorRef)];

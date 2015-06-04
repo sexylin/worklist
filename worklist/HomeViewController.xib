@@ -7,6 +7,8 @@
         <customObject id="-2" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
                 <outlet property="_leftContentView" destination="Kft-Al-rz5" id="PRn-Kq-1Rr"/>
+                <outlet property="_next7Days" destination="ARf-vY-QJ3" id="P3T-YM-nOT"/>
+                <outlet property="_overdueItem" destination="1fX-gK-U3y" id="Hqp-qu-GmO"/>
                 <outlet property="_rightContentView" destination="VuE-j1-tTN" id="d3Y-Og-o5z"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -20,6 +22,20 @@
                 <customView id="Kft-Al-rz5" customClass="UIView">
                     <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                    <subviews>
+                        <customView id="EFX-m7-chk" customClass="SLItemView">
+                            <rect key="frame" x="45" y="543" width="235" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        </customView>
+                        <customView id="ARf-vY-QJ3" customClass="SLItemView">
+                            <rect key="frame" x="45" y="457" width="235" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        </customView>
+                        <customView id="1fX-gK-U3y" customClass="SLItemView">
+                            <rect key="frame" x="45" y="500" width="235" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        </customView>
+                    </subviews>
                 </customView>
                 <customView id="VuE-j1-tTN" customClass="UIView">
                     <rect key="frame" x="300" y="0.0" width="700" height="600"/>

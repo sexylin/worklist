@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="FZ3-fW-dWW" customClass="SLItemView">
+            <rect key="frame" x="0.0" y="0.0" width="235" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S87-8S-GSN" customClass="SLEventView">
+                    <rect key="frame" x="0.0" y="0.0" width="235" height="35"/>
+                </customView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5U-NP-1Hz">
+                    <rect key="frame" x="3" y="6" width="22" height="22"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="calendar" id="8Nh-ra-Ukg"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5t-fH-pDC">
+                    <rect key="frame" x="31" y="9" width="158" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Next 7 days" id="Jqg-XS-IR8">
+                        <font key="font" size="14" name="STHeitiSC-Light"/>
+                        <color key="textColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.36078431370000003" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Jz-9y-hTU">
+                    <rect key="frame" x="199" y="7" width="38" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="4" id="Vow-Lf-TwK">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <connections>
+                <outlet property="backgroudView" destination="S87-8S-GSN" id="bCw-l1-WyZ"/>
+                <outlet property="countLabel" destination="4Jz-9y-hTU" id="ENm-Ny-iZd"/>
+                <outlet property="icon" destination="N5U-NP-1Hz" id="IGz-1H-VgJ"/>
+                <outlet property="titleLabel" destination="k5t-fH-pDC" id="GuP-CZ-Tq3"/>
+            </connections>
+            <point key="canvasLocation" x="137.5" y="648.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="calendar" width="266" height="226"/>
+    </resources>
+</document>
